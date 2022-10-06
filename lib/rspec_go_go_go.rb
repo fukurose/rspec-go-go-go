@@ -1,9 +1,10 @@
 # frozen_string_literal: true
 
-require_relative "rspec_go_go_go/version"
-require_relative "rspec_go_go_go/progress_counter"
-require_relative "rspec_go_go_go/progress_framer"
+require "rspec_go_go_go/version"
+require "rspec_go_go_go/progress_counter"
+require "rspec_go_go_go/progress_framer"
 
+require "rspec/core"
 require "rspec/core/formatters/base_text_formatter"
 
 module RSpecGoGoGo
