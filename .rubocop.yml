@@ -16,3 +16,7 @@ Layout/LineLength:
 
 Style/Documentation:
   Enabled: false
+
+RSpec/FilePath:
+  Enabled: false
+  

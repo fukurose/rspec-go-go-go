@@ -4,7 +4,7 @@ require_relative "lib/rspec_go_go_go/version"
 
 Gem::Specification.new do |spec|
   spec.name = "rspec-go-go-go"
-  spec.version = RspecGoGoGo::VERSION
+  spec.version = RSpecGoGoGo::VERSION
   spec.authors = ["fukurose"]
   spec.email = ["tfukurose@gmail.com"]
 

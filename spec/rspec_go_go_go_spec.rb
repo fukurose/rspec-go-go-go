@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe RspecGoGoGo do
+RSpec.describe RSpecGoGoGo do
   it "has a version number" do
-    expect(RspecGoGoGo::VERSION).not_to be nil
+    expect(RSpecGoGoGo::VERSION).not_to be_nil
   end
 end
