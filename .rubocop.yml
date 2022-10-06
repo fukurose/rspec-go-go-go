@@ -1,5 +1,7 @@
+require: rubocop-rspec
+
 AllCops:
-  EnabledByDefault: true
+  NewCops: enable
 
 Style/StringLiterals:
   Enabled: true
