@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-RSpec.describe RSpecGoGoGo::ProgressFramer do
-  let(:counter) { RSpecGoGoGo::ProgressCounter.new(3) }
+RSpec.describe RSpec::GoGoGo::ProgressFramer do
+  let(:counter) { RSpec::GoGoGo::ProgressCounter.new(3) }
 
   context "when no progress" do
     it "The number of executions and failures should be displayed." do

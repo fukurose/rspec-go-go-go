@@ -1,10 +1,11 @@
 # frozen_string_literal: true
-
-require_relative "lib/rspec_go_go_go/version"
+lib = File.expand_path("lib", __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+require "rspec/go_go_go/version"
 
 Gem::Specification.new do |spec|
   spec.name = "rspec-go-go-go"
-  spec.version = RSpecGoGoGo::VERSION
+  spec.version = RSpec::GoGoGo::VERSION
   spec.authors = ["fukurose"]
   spec.email = ["tfukurose@gmail.com"]
 

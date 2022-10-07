@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-RSpec.describe RSpecGoGoGo::ProgressCounter do
+RSpec.describe RSpec::GoGoGo::ProgressCounter do
   it "argument is set to the total" do
     expect(described_class.new(3).total).to(eq(3))
   end

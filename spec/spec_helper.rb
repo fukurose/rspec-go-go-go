@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-require "rspec_go_go_go"
+require "rspec/go_go_go"
 
 RSpec.configure do |config|
   # Enable flags like --only-failures and --next-failure
