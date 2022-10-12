@@ -52,8 +52,8 @@ module RSpec
 
       # bar: ====>-----
       def in_progress_bar(counter, width)
-        bar_len = counter.rate * width.to_f
-        "#{"=" * (bar_len - 1)}>".ljust(width, "-")
+        bar_len = counter.rate * width.to_f / 2
+        ("Go" * bar_len).ljust(width, "-")
       end
 
       # bar: ==========
