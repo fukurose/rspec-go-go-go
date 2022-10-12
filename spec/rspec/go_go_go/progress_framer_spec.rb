@@ -13,7 +13,7 @@ RSpec.describe RSpec::GoGoGo::ProgressFramer do
     end
 
     it "progress bar is not displayed." do
-      expect(described_class.bar(counter)).to eq "|                                                            |"
+      expect(described_class.bar(counter)).to eq "|------------------------------------------------------------|"
     end
   end
 
@@ -32,7 +32,7 @@ RSpec.describe RSpec::GoGoGo::ProgressFramer do
     end
 
     it "progress rate bar should be displayed.(until halfway point)" do
-      expect(described_class.bar(counter)).to eq "|========================================                    |"
+      expect(described_class.bar(counter)).to eq "|=======================================>--------------------|"
     end
   end
 
