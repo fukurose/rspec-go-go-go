@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    rspec-go-go-go (0.1.1)
+    rspec-go-go-go (0.1.2)
 
 GEM
   remote: https://rubygems.org/
