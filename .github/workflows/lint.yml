@@ -1,0 +1,25 @@
+name: Lint
+
+on:
+  push:
+    branches: 'main'
+  pull_request:
+    branches: '*'
+    types: [opened, reopened, synchronize]
+
+jobs:
+  rubocop:
+    name: Run Rubocop
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Bundle Install
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3'
+          bundler-cache: true
+
+      - name: Run Rubocop
+        run: bundle exec rubocop
