@@ -1,0 +1,24 @@
+name: Test
+
+on:
+  push:
+    branches: 'main'
+  pull_request:
+    branches: '*'
+    types: [opened, reopened, synchronize]
+
+jobs:
+  rspec:
+    name: RSpec
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Bundle Install
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3'
+          bundler-cache: true
+
+      - name: Run RSpec
+        run: bundle exec rspec
