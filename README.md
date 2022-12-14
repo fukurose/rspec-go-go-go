@@ -1,15 +1,14 @@
 # RSpecGoGoGo
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/rspec_go_go_go`. To experiment with that code, run `bin/console` for an interactive prompt.
+Run RSpec with progress bar.
 
-TODO: Delete this and the text above, and describe your gem
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rspec_go_go_go'
+gem 'rspec-go-go-go'
 ```
 
 And then execute:
@@ -18,26 +17,33 @@ And then execute:
 
 Or install it yourself as:
 
-    $ gem install rspec_go_go_go
+    $ gem install rspec-go-go-go
 
 ## Usage
 
-TODO: Write usage instructions here
+```
+rspec --format RSpec::GoGoGo::Formatter
+```
 
-## Development
+or write .rspec
 
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake spec` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and the created tag, and push the `.gem` file to [rubygems.org](https://rubygems.org).
+```
+--format RSpec::GoGoGo::Formatter
+```
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/rspec_go_go_go. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [code of conduct](https://github.com/[USERNAME]/rspec_go_go_go/blob/master/CODE_OF_CONDUCT.md).
+Bug reports and pull requests are welcome on GitHub at https://github.com/fukurose/rspec-go-go-go. 
+
+After checking out the repository, you need to install dependencies:
+```
+gem install bundler -v 2.3.7
+bundle install
+```
+
+To install this gem on your local machine, run `bundle exec rake install`.
+Please check your contributions with RuboCop by running `bundle exec rubocop`.
 
 ## License
 
 The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the RSpecGoGoGo project's codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/rspec_go_go_go/blob/master/CODE_OF_CONDUCT.md).
