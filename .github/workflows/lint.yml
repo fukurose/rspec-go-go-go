@@ -9,7 +9,7 @@ on:
 
 jobs:
   rubocop:
-    name: Run Rubocop
+    name: Rubocop
     runs-on: ubuntu-latest
 
     steps:
