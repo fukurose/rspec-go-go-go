@@ -1,8 +1,11 @@
-name: RSpec
+name: Test
 
 on:
   push:
+    branches: 'main'
   pull_request:
+    branches: '*'
+    types: [opened, reopened, synchronize]
 
 jobs:
   rspec:
