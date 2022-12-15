@@ -32,7 +32,7 @@ module RSpec
                        else
                          in_progress_bar(counter, width)
                        end
-        "|#{progress_bar}|"
+        RSpec::Core::Formatters::ConsoleCodes.wrap("|#{progress_bar}|", :magenta)
       end
 
       def result(counter)
@@ -50,7 +50,7 @@ module RSpec
         "-" * width
       end
 
-      # bar: ====>-----
+      # bar: GoGoGo-----
       def in_progress_bar(counter, width)
         bar_len = counter.rate * width.to_f / 2
         ("Go" * bar_len).ljust(width, "-")
