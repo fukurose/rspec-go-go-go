@@ -3,6 +3,11 @@
 RSpec.describe RSpec::GoGoGo::ProgressFramer do
   let(:counter) { RSpec::GoGoGo::ProgressCounter.new(10) }
 
+  # setting no color
+  before do
+    allow(RSpec::Core::Formatters::ConsoleCodes).to receive(:wrap) { |text, *| text }
+  end
+
   context "when terminal width is 60" do
     before { allow(described_class).to receive(:terminal_width).and_return(60) }
 
