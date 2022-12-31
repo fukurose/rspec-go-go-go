@@ -16,11 +16,31 @@ module RSpec
       end
 
       def terminal_width
-        `tput cols`.to_i
+        @terminal_width ||= `tput cols`.to_i
+      end
+
+      def init_display(counter)
+        "\n" * counter.display_line_for_description
       end
 
       def display(counter)
-        "\r #{result(counter)} #{bar(counter)} #{rate(counter)}"
+        move_to_start_position(counter) + display_progress(counter) + display_example_descriptions(counter)
+      end
+
+      def move_to_start_position(counter)
+        "\e[#{counter.display_line_for_description}A\r"
+      end
+
+      def display_progress(counter)
+        "#{result(counter)} #{bar(counter)} #{rate(counter)}"
+      end
+
+      def display_example_descriptions(counter)
+        counter.recently_descriptions.map do |description, color|
+          # TODO: It is halved for multibyte characters, but it calculates properly.
+          text = description.slice(0, terminal_width / 2)
+          "\e[1B\e[0J\r  #{RSpec::Core::Formatters::ConsoleCodes.wrap(text, color)}"
+        end.join
       end
 
       def bar(counter)
